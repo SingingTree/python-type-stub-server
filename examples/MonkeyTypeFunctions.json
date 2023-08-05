@@ -1,0 +1,1 @@
+{"reticulate": [{"module": "test_package.nested_package.splines", "stub_line": 1}], "calibrate_blorgle": [{"module": "test_package.blorgle", "stub_line": 7}], "make_widget_matrix": [{"module": "another_package.widget_factory", "stub_line": 4}]}

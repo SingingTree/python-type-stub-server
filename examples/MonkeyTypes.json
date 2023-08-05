@@ -1,0 +1,1 @@
+{"test_package.nested_package.splines": "def reticulate(a: int, b: int) -> complex: ...", "test_package.blorgle": "from typing import (\n    List,\n    Tuple,\n)\n\n\ndef calibrate_blorgle(blorgle_manifest_counts: List[int]) -> Tuple[int, str]: ...", "another_package.widget_factory": "from typing import List\n\n\ndef make_widget_matrix(num_widgets: int) -> List[List[int]]: ..."}

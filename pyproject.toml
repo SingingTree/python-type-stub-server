@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "python-type-stub-server"
+version = "0.1.0"
+description = ""
+authors = ["Bryce Seager van Dyk <bryce@vandyk.net.nz>"]
+readme = "README.md"
+packages = [{include = "python_type_stub_server"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.group.tools.dependencies]
+fastapi = "^0.101.0"
+MonkeyType = "^23.3.0"
+typer = "^0.9.0"
+uvicorn = {version = "^0.23.2",extras = ["standard"]}
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
+isort = "^5.12.0"
+
+[tool.isort]
+profile = "black" # Don't fight black's import style.
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
