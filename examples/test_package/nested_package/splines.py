@@ -4,6 +4,7 @@ import math
 def reticulate(a, b):
     def inner_func(c):
         return c + 2.3
+
     blogsons_number = complex(0, a) * complex(0, b)
     maximum_amplitude = 20
     step_count = 0

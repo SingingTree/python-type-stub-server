@@ -22,8 +22,8 @@ class StubVisitor(ast.NodeVisitor):
 
 
 def main(
-        stub_path: Annotated[str, typer.Argument(help="Path to the stub json")],
-        output_path: Annotated[str, typer.Argument(help="Path to write the output to")]
+    stub_path: Annotated[str, typer.Argument(help="Path to the stub json")],
+    output_path: Annotated[str, typer.Argument(help="Path to write the output to")],
 ):
     with open(stub_path, "r") as stub_file:
         module_to_stubs_dictionary = json.load(stub_file)
@@ -35,7 +35,9 @@ def main(
             stub_visitor.visit(parsed_stubs)
             for function in stub_visitor.functions:
                 function_info = function_lookup_dict.get(function.name, [])
-                function_info.append({"module": module, "stub_line": function.stub_line})
+                function_info.append(
+                    {"module": module, "stub_line": function.stub_line}
+                )
                 function_lookup_dict[function.name] = function_info
         with open(output_path, "w") as output_file:
             json.dump(function_lookup_dict, output_file)

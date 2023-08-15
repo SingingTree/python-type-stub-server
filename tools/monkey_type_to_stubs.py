@@ -51,7 +51,9 @@ def main(
     monkey_type_config_path: Annotated[
         str, typer.Option(help="Path to MonkeyType config", show_default=False)
     ] = "monkeytype.config:get_default_config()",  # This is the default used by the MonkeyType CLI, so mimic that.
-    output_path: Annotated[str, typer.Option(help="Path to write the output to")] = "MonkeyTypes.json",
+    output_path: Annotated[
+        str, typer.Option(help="Path to write the output to")
+    ] = "MonkeyTypes.json",
 ):
     config = get_monkeytype_config(monkey_type_config_path)
     modules_to_stubs = get_modules_to_stubs_dict(config)
